@@ -1,4 +1,6 @@
 import pprint
+from statistics import mean
+from operator import attrgetter
 
 # Duotas "users" sąrašas.
 
@@ -26,3 +28,21 @@ users = [
   { 'id': '8', 'name': 'Simon Peterson', 'age': 30 },
   { 'id': '9', 'name': 'Daniel Cane', 'age': 51 },
 ]
+
+def get_user_average_age(users):
+  """Grąžina suapvalintą vartotojų amžiaus vidurkį"""
+
+
+# print(get_user_average_age(users))
+
+
+def get_users_names(users):
+  """Grąžina vartotojų vardų, išrikiuotų abėcėlės tvarka, sąrašą"""
+
+  nameList = []
+  for user in users:
+    nameList.append(user["name"])
+  return sorted(nameList)
+
+
+print(get_users_names(users))
