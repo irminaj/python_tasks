@@ -24,3 +24,32 @@ users = [
     { 'id': '8', 'name': 'Simon Peterson', 'age': 32, 'hasDog': False, 'hasCat': True },
     { 'id': '9', 'name': 'Daniel Cane', 'age': 15, 'hasDog': False, 'hasCat': False },
 ]
+
+def filter_all_or_nothing_people(users):
+    """Grąžina vartotojus, turinčius arba abu gyvūnus, arba nei vieno"""
+    
+    filteredList = []
+    for user in users:
+        if user["hasDog"] == False and user["hasCat"] == False:
+            filteredList.append(user)
+        if user["hasDog"] == True and user["hasCat"] == True:
+            filteredList.append(user)
+        else:
+            continue
+    return filteredList
+
+# print(filter_all_or_nothing_people(users))
+
+
+def filter_underaged_owners(users):
+    """Grąžina pilnamečius vartotojus, turinčius bent vieną gyvūną"""
+    
+    filteredList = []
+    for user in users:
+        if user["age"] >= 18 and (user["hasDog"] == True or user["hasCat"] == True):
+            filteredList.append(user)
+        else:
+            continue
+    return filteredList
+
+# print(filter_underaged_owners(users))
