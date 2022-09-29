@@ -19,13 +19,15 @@
 
 class Movie:
     """Movie klasė turinti pavadinimo, režisieriaus ir biudžeto savybes"""
+
     def __init__(self, title, director, budget):
-        self.title = (title)
+        """Sukuriamos pavadinimo, režisieriaus ir biudžeto savybės"""
+        self.title = title
         self.director = director
         self.budget = budget
 
     def was_expensive(self):
-        """Grąžina True, jeigu biudžetas > 10 000 000 USD, kitu atveju False"""
+        """Grąžina True, jeigu biudžetas > 100 000 000 USD, kitu atveju False"""
         return self.budget > 100000000
           
 
@@ -35,6 +37,6 @@ movie2 = Movie("The Godfather", "Francis Ford Coppola", 6000000)
 movie3 = Movie("Pulp Fiction", "Quentin Tarantino", 8000000)
 
 
-print(movie1.was_expensive())
-print(movie2.was_expensive())
-print(movie3.was_expensive())
+# print(movie1.was_expensive())
+# print(movie2.was_expensive())
+# print(movie3.was_expensive())
