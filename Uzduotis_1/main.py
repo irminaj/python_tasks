@@ -25,15 +25,15 @@ users = [
     { 'id': '9', 'name': 'Daniel Cane', 'age': 15, 'hasDog': False, 'hasCat': False },
 ]
 
-def filter_all_or_nothing_people(users):
+def filter_all_or_nothing_people(owners):
     """Grąžina vartotojus, turinčius arba abu gyvūnus, arba nei vieno"""
     
     filteredList = []
-    for user in users:
-        if user["hasDog"] == False and user["hasCat"] == False:
-            filteredList.append(user)
-        if user["hasDog"] == True and user["hasCat"] == True:
-            filteredList.append(user)
+    for owner in owners:
+        if owner["hasDog"] == False and owner["hasCat"] == False:
+            filteredList.append(owner)
+        if owner["hasDog"] == True and owner["hasCat"] == True:
+            filteredList.append(owner)
         else:
             continue
     return filteredList
@@ -41,13 +41,13 @@ def filter_all_or_nothing_people(users):
 # print(filter_all_or_nothing_people(users))
 
 
-def filter_underaged_owners(users):
+def filter_underaged_owners(owners):
     """Grąžina pilnamečius vartotojus, turinčius bent vieną gyvūną"""
     
     filteredList = []
-    for user in users:
-        if user["age"] >= 18 and (user["hasDog"] == True or user["hasCat"] == True):
-            filteredList.append(user)
+    for owner in owners:
+        if owner["age"] <= 18 and (owner["hasDog"] == True or owner["hasCat"] == True):
+            filteredList.append(owner)
         else:
             continue
     return filteredList
