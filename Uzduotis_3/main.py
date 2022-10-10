@@ -11,3 +11,12 @@ audi = {
   "year": 2005,
   "color": 'white',
 }
+
+def get_dict_values(item):
+  """Grąžina žodyno reikšmes sąraše"""
+
+  valuesList = list(item.values())
+  return valuesList
+
+
+# print(get_dict_values(audi))
